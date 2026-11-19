@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Baba ♡</title>
+<style>
+:root{--ink:#5b402d;--muted:#8c6b4d;--gold:#c49a67}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;overflow:hidden;color:var(--ink);font-family:Georgia,serif;background:radial-gradient(circle at 20% 15%,#fffdf8 0,transparent 35%),radial-gradient(circle at 85% 85%,#d9bd9a66 0,transparent 38%),linear-gradient(135deg,#fbf6ed,#ead8bf)}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E")}
+.card{position:relative;width:min(90vw,720px);padding:clamp(2.3rem,7vw,5rem) 1.6rem;text-align:center;border:1px solid #b58c624d;border-radius:28px;background:#fffaf0b8;box-shadow:0 24px 75px #68472b20,inset 0 1px #fff;backdrop-filter:blur(8px);animation:appear 1.3s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(25px) scale(.97)}to{opacity:1;transform:none}}
+.kicker{font:600 .68rem Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#98724e}
+.orn{margin:0 0 1.4rem;color:#b28a5d;letter-spacing:.5em}
+h1{font-weight:400;line-height:1.05;letter-spacing:-.04em;font-size:clamp(2.5rem,8vw,5rem);margin:1.2rem 0;color:#68482f;text-shadow:0 2px #fff}
+h1 em{display:block;margin-top:.18em;color:#a8794b;font-size:.83em}
+.rule{height:1px;width:76px;margin:1.8rem auto;background:linear-gradient(90deg,transparent,#b58b5e,transparent)}
+.message{max-width:510px;margin:auto;font-size:clamp(1.02rem,2.6vw,1.22rem);line-height:1.9;color:#76583e}
+.message p{margin:.55rem 0}
+.sign{margin-top:1.7rem;font-style:italic;font-size:1.3rem;color:#a2764b}
+.spark{position:fixed;pointer-events:none;color:#fffdf2;text-shadow:0 0 8px white,0 0 18px #d0a36c;animation:twinkle var(--t) ease-in-out infinite;opacity:0}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.3) rotate(0)}45%{opacity:1;transform:scale(1) rotate(45deg)}70%{opacity:.4;transform:scale(.65) rotate(80deg)}}
+.footer{position:fixed;bottom:17px;font: .65rem Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8d6b4e99}
+</style></head>
+<body><div class="grain"></div>
+<main class="card">
+<div class="orn">✧ &nbsp; ✦ &nbsp; ✧</div><div class="kicker">A little note for someone very special</div>
+<h1>Happy International<br>Men's Day <em>Baba</em></h1>
+<div class="rule"></div>
+<div class="message">
+<p>Some things are so familiar that we forget to say them out loud. So today, I want to remind you how much you mean to me.</p>
+<p>Thank you for being there in all the ways you have, for the things you do without being asked, for the sacrifices I may not always notice, and for loving me in your own quiet, unmistakable way.</p>
+<p>I may not say it every day, but I am proud to be your daughter. I hope life is as kind to you as you have been to the people you love. You deserve good health, happiness, and a thousand little reasons to smile.</p>
+</div>
+<div class="sign">Love you, always. ♡</div>
+</main><div class="footer">Made with all my love · 19 November</div>
+<script>
+const chars=["✦","✧","⋆","✶","·"];function makeSpark(){let s=document.createElement("span");s.className="spark";s.textContent=chars[Math.random()*chars.length|0];s.style.left=Math.random()*100+"vw";s.style.top=Math.random()*100+"vh";s.style.fontSize=8+Math.random()*17+"px";s.style.setProperty("--t",2+Math.random()*3+"s");s.style.animationDelay=Math.random()*2+"s";document.body.append(s);setTimeout(()=>s.remove(),6000)}for(let i=0;i<55;i++)setTimeout(makeSpark,i*55);setInterval(makeSpark,230);
+</script></body></html>

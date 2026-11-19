@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy International Men's Day ♡</title>
+<style>
+:root{--wine:#713e48;--rose:#b8757c;--cream:#fff7f1;--blush:#f2d9d5}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;overflow:hidden;font-family:Georgia,serif;color:var(--wine);background:radial-gradient(ellipse at 15% 15%,#fff 0,transparent 36%),radial-gradient(ellipse at 90% 85%,#e8bfc0 0,transparent 40%),linear-gradient(135deg,#fff8f1,#f1d9d2 55%,#e9c7c3)}
+.orb{position:fixed;width:55vw;max-width:600px;aspect-ratio:1;border-radius:50%;background:#fff7f080;filter:blur(55px);animation:float 7s ease-in-out infinite alternate}
+@keyframes float{to{transform:translate(25px,-20px) scale(1.08)}}
+.card{z-index:2;position:relative;width:min(90vw,700px);padding:clamp(2.4rem,8vw,5rem) 1.55rem;text-align:center;border:1px solid #b8757c55;border-radius:30px;background:#fffaf5c7;backdrop-filter:blur(10px);box-shadow:0 25px 80px #713e4820;animation:rise 1.15s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+.top{font:600 .67rem Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#a66c74}
+.heart{font-size:1.7rem;color:#bd7b82;margin:1.1rem 0;animation:beat 1.7s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.18)}24%{transform:scale(1)}}
+h1{font-weight:400;font-size:clamp(2.55rem,8vw,5rem);line-height:1.02;letter-spacing:-.045em;margin:.4rem 0 1.1rem;color:#70434b}
+h1 em{display:block;color:#b4777d;font-size:.8em;margin-top:.18em}
+.copy{max-width:500px;margin:0 auto;color:#815d60;font-size:clamp(1.02rem,2.5vw,1.18rem);line-height:1.85}
+.line{width:62px;height:1px;background:linear-gradient(90deg,transparent,#c58d91,transparent);margin:1.7rem auto}
+.note{font-style:italic;color:#a56c73;font-size:1.13rem}
+button{margin-top:1.5rem;border:1px solid #bd8588;background:#fff7f2;color:#874f58;padding:.85rem 1.35rem;border-radius:999px;font:.85rem Arial,sans-serif;letter-spacing:.06em;cursor:pointer;box-shadow:0 7px 22px #874f5818;transition:.25s}
+button:hover{transform:translateY(-2px);background:#f9e8e4}
+.reply{min-height:1.7em;margin-top:1rem;color:#9a626a;font-style:italic;font-size:1.04rem;line-height:1.6}
+.floaty{position:fixed;z-index:1;pointer-events:none;animation:drift var(--d) linear forwards;opacity:0;color:#bd8589;text-shadow:0 0 12px #fff}
+@keyframes drift{0%{opacity:0;transform:translateY(15px) rotate(-15deg) scale(.7)}15%{opacity:.8}85%{opacity:.7}100%{opacity:0;transform:translateY(-110vh) rotate(25deg) scale(1.2)}}
+.footer{position:fixed;bottom:17px;font:.64rem Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:#98676b99}
+</style></head>
+<body><div class="orb"></div>
+<main class="card">
+<div class="top">A little note for you</div>
+<div class="heart">♡</div>
+<h1>Happy International<br>Men's Day <em>Meow</em></h1>
+<div class="line"></div>
+<p class="copy">I hope today reminds you how appreciated you are. You deserve kindness, good things, and people who make you feel as wonderful as you make their days feel.</p>
+<p class="note">And, for what it's worth, you have a way of making me smile more than you probably realise.</p>
+<button id="reveal">A tiny extra wish…</button>
+<div class="reply" id="reply" aria-live="polite"></div>
+</main><div class="footer">A little wish, with a little extra thought ♡</div>
+<script>
+const floaters=["♡","✧","♥","⋆"];function floatHeart(){let e=document.createElement("span");e.className="floaty";e.textContent=floaters[Math.random()*floaters.length|0];e.style.left=Math.random()*100+"vw";e.style.bottom="-25px";e.style.fontSize=12+Math.random()*22+"px";e.style.setProperty("--d",7+Math.random()*7+"s");document.body.append(e);setTimeout(()=>e.remove(),14500)}setInterval(floatHeart,650);for(let i=0;i<12;i++)setTimeout(floatHeart,i*250);
+document.getElementById("reveal").addEventListener("click",()=>{document.getElementById("reply").textContent="I hope you have a lovely day. And maybe I get to be one of the reasons you smile today. ♡";for(let i=0;i<22;i++)setTimeout(floatHeart,i*45)});
+</script></body></html>
